@@ -26,12 +26,9 @@ valueElement.value = counterValue;
 minusBtn.onclick = function () {
     counterValue -= 1;
     valueElement.value = counterValue; 
-    // Update the display
 }
 
-// Add event listener for the plus button
 plusBtn.onclick = function () {
     counterValue += 1;
     valueElement.value = counterValue; 
-    // Update the display
 }
