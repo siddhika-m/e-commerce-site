@@ -8,6 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="script.js" defer></script>
   <title>Sneakers</title>
 </head>
 
@@ -34,12 +36,12 @@
   <main class="container">
     <section class="product-details">
       <div class="product-images">
-        <img src="images/image-product-1.jpg" alt="img-1">
+        <img src="images/image-product-1.jpg" alt="img-1" id="mainImg">
         <div class="flex thumbnail">
-          <img src="images/image-product-1-thumbnail.jpg" alt="img1">
-          <img src="images/image-product-2-thumbnail.jpg" alt="img2">
-          <img src="images/image-product-3-thumbnail.jpg" alt="img3">
-          <img src="images/image-product-4-thumbnail.jpg" alt="img4">
+          <img src="images/image-product-1-thumbnail.jpg" alt="img1" id="img1">
+          <img src="images/image-product-2-thumbnail.jpg" alt="img2" id="img2">
+          <img src="images/image-product-3-thumbnail.jpg" alt="img3" id="img3">
+          <img src="images/image-product-4-thumbnail.jpg" alt="img4" id="img4">
         </div>
       </div>
       <div class="product-content">
@@ -53,11 +55,11 @@
         
         <div class="flex">
           <div class="quantity">
-            <img src="images/icon-minus.svg" alt="-">
-            <input type="text" id="value" placeholder="0">
-            <img src="images/icon-plus.svg" alt="+">
+            <img src="images/icon-minus.svg" alt="-" id="minus">
+            <input type="text" id="value" min="0">
+            <img src="images/icon-plus.svg" alt="+" id="plus">
           </div>
-          <div class="add-to-cart flex">
+          <button class="add-to-cart flex" tooltip="Click to add">
             <img src="images/icon-cart.svg" alt="cart" class="cart">
             <p>Add to cart</p>
           </div>
