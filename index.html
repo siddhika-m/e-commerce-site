@@ -15,26 +15,29 @@
 
 <body>
   <header class="container">
+    <!--Navbar-->
     <nav>
-      <div class="nav-logo"> <img src="images/logo.svg" alt="logo"></div>
+      <div class="nav-logo"><a href="#"><img src="images/logo.svg" alt="logo"></a></div>
       <div class="nav-items">
         <ul>
-          <li>Collections</li>
-          <li>Men</li>
-          <li>Women</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </div>
       <div class="nav-side">
-        <img src="images/icon-cart.svg" alt="cart" class="cart" id="cart">
-        <img src="images/image-avatar.png" alt="avatar" class="avatar">
+        <img src="images/icon-cart.svg" alt="cart" class="cart" id="cart" title="Cart">
+        <img src="images/image-avatar.png" alt="avatar" class="avatar" title="Your Avatar">
       </div>
     </nav>
     <hr>
   </header>
   <main class="container">
+    <!--Product Details-->
     <section class="product-details">
+      <!--Images of the product-->
       <div class="product-images">
         <img src="images/image-product-1.jpg" alt="img-1" id="mainImg">
         <div class="flex thumbnail">
@@ -44,6 +47,7 @@
           <img src="images/image-product-4-thumbnail.jpg" alt="img4" id="img4">
         </div>
       </div>
+      <!--Content of the image-->
       <div class="product-content">
         <p class="heading">SNEAKER COMPANY</p>
         <h1 class="title"> Fall Limited Edition Sneakers</h1>
@@ -52,14 +56,13 @@
         <div class="flex"><p class="price">$125.00</p>
         <p class="discount">50%</p></div>
         <p class="heading"><strike>$250.00</strike></p>
-        
         <div class="flex">
           <div class="quantity">
             <img src="images/icon-minus.svg" alt="-" id="minus">
-            <input type="text" id="value" min="0">
+            <input type="number" id="value" >
             <img src="images/icon-plus.svg" alt="+" id="plus">
           </div>
-          <button class="add-to-cart flex" tooltip="Click to add">
+          <button class="add-to-cart flex" title="Click to add">
             <img src="images/icon-cart.svg" alt="cart" class="cart">
             <p>Add to cart</p>
           </div>
