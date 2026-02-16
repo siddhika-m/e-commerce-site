@@ -268,7 +268,7 @@ input {
 
     .nav-side{
         position: absolute;
-        right: 0;
+        top: 10px;
         left: 400px;
     }
     #cart{
