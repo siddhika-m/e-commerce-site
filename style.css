@@ -33,14 +33,6 @@ button {
     background: none;
 }
 
-/*Generic*/
-
-.cart {
-    filter: brightness(0);
-    height: 15px;
-
-}
-
 /*Navbar*/
 nav {
     margin: 30px auto;
@@ -70,16 +62,16 @@ nav {
 }
 
 .nav-side {
-    position: fixed;
-    top: 30px;
+    position: absolute;
+    top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    right: 50px;
+    right: 0px;
+    gap: 30px;
 }
 
 .nav-side img {
-    margin: 0px 30px;
     cursor: pointer;
 }
 
@@ -118,6 +110,7 @@ main {
 .thumbnail img {
     border-radius: 10px;
     height: 100px;
+    margin: 10px;
     position: relative;
 }
 
@@ -134,7 +127,7 @@ main {
 
 .heading {
     letter-spacing: 2px;
-    font-size: medium;
+    font-size: large;
     font-weight: 700;
     opacity: 0.6;
 }
@@ -161,6 +154,8 @@ main {
 }
 
 .mobile {
+    justify-content: center;
+    align-items: center;
     display: block;
 }
 
@@ -193,31 +188,42 @@ strike {
 
 .cart-add {
     display: flex;
+    gap: 60px;
 }
 
+.cart{
+    filter: brightness(0);
+}
 .quantity {
-    padding: 15px 10px;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background: #F6F7FC;
-
+    border-radius: 10px;
 }
 
 .quantity img {
     cursor: pointer;
+    
 }
 
 input {
     outline: none;
     border: none;
-    width: 100px;
+    width: 70%;
     text-align: center;
     color: black;
     background: #F6F7FC;
 }
 
 .add-to-cart {
-    margin: 0px 40px;
     display: flex;
-    padding: 5px 70px;
+    width: 90%;
+    height: 70%;
+    margin: auto;
+    padding: 5px 0px;
     gap: 15px;
     background-color: #FF7E1B;
     color: black;
@@ -232,32 +238,32 @@ input {
 }
 
 /*Responsive Queries*/
-@media screen and (max-width:600px) {
-    .html{
-        width: 100%;
-    }
+@media screen and (max-width:700px) {
     .hamburger {
         display: block;
         margin: 0px 20px;
     }
 
-    .hamburger img{
+    .hamburger img {
         margin-top: 5px;
         width: 1.5rem;
         filter: brightness(0);
     }
-    .hamburger img:hover > .nav-items{
+
+    .hamburger img:hover>.nav-items {
         display: block;
         width: 70%;
     }
+
     .nav-items {
         display: none;
-        
+
     }
 
     nav {
         align-items: center;
         width: 100%;
+        
     }
 
     .nav-logo img {
@@ -266,25 +272,47 @@ input {
         width: 12rem;
     }
 
-    .nav-side{
+    .nav-side {
         position: absolute;
-        top: 10px;
-        left: 400px;
+        top: 20px;
+        left: 420px;
     }
+    .avatar{
+        width: 35px;
+    }
+
     #cart{
-        height: 30px;
-        margin: 0;
-        
+        height: 25px;
     }
+
+    hr{
+        display: none;
+    }
+
+    .container{
+        padding: 0;
+    }
+
     .product-details {
+        padding: 0;
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 0;
     }
 
     .mobile {
         display: flex;
-        gap: 150px;
+        gap: 100px;
         font-size: xx-large;
+    }
+    .product-images{
+        margin: 0;
+        padding: 0;
+        gap: 0;
+    }
+
+    .product-content{
+        padding: 30px;
     }
 
     .price {
@@ -355,17 +383,16 @@ input {
     }
 
     .quantity {
-        width: 99%;
         margin: auto;
+        margin-bottom: 20px;
     }
 
     input {
-        width: 90%;
+        width: 70%;
     }
 
     .add-to-cart {
-        width: 100%;
-        margin: 0;
+        margin: auto;
         height: max-content;
         font-size: larger;
     }
