@@ -17,10 +17,13 @@
   <header class="container">
     <!--Navbar-->
     <nav>
-      <div class="hamburger"><img src="images/icon-menu.svg" alt=" menu"></div>
+      <div class="hamburger" id="toggleBtn">
+        <img src="images/icon-menu.svg" alt=" menu">
+      </div>
       <div class="nav-logo"><a href="#"><img src="images/logo.svg" alt="logo"></a></div>
-      <div class="nav-items">
+      <div class="nav-items" id="nav-items">
         <ul>
+          <img src="images/icon-close.svg" alt="X" id="close" class="close">
           <li><a href="#">Collections</a></li>
           <li><a href="#">Men</a></li>
           <li><a href="#">Women</a></li>
@@ -29,7 +32,7 @@
         </ul>
       </div>
       <div class="nav-side">
-        <img src="images/icon-cart.svg" alt="cart"  id="cart" title="Cart">
+        <img src="images/icon-cart.svg" alt="cart" id="cart" title="Cart">
         <img src="images/image-avatar.png" alt="avatar" class="avatar" title="Your Avatar">
       </div>
     </nav>
@@ -41,7 +44,7 @@
       <!--Images of the product-->
       <div class="product-images">
         <div class="slide-buttons">
-          <img src="images/icon-previous.svg" alt="/<" class="previous" id="prev" >
+          <img src="images/icon-previous.svg" alt="/<" class="previous" id="prev">
           <img src="images/icon-next.svg" alt="/>" class="next" id="next">
         </div>
         <img src="images/image-product-1.jpg" alt="Main-img" id="mainImg">

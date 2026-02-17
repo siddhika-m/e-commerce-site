@@ -96,3 +96,17 @@ nextBtn.onclick = function () {
         mIndex = 1
     }
 }
+
+//adding funcitonality to the toggle button
+let toggleBtn = document.getElementById("toggleBtn");
+let navItems = document.getElementById("nav-items");
+let close = document.getElementById("close");
+
+toggleBtn.onclick = function(){
+    navItems.style.display= "inline-block";
+    close.style.display ="block"
+}
+
+close.onclick = function(){
+    navItems.style.display ="none";
+}

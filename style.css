@@ -48,8 +48,8 @@ nav {
 
 .hamburger {
     display: none;
+    cursor: pointer;
 }
-
 .nav-items ul {
     display: flex;
     align-items: center;
@@ -82,6 +82,13 @@ nav {
 #cart {
     height: 20px;
 }
+
+.close {
+        display: none;
+        position: fixed;
+        margin: 0px 20px;
+        top: 30px;
+    }
 
 /*Main-body*/
 main {
@@ -151,6 +158,7 @@ main {
 .slide-buttons {
     display: none;
     position: absolute;
+    z-index: 1;
     cursor: pointer;
 }
 
@@ -192,9 +200,10 @@ strike {
     gap: 60px;
 }
 
-.cart{
+.cart {
     filter: brightness(0);
 }
+
 .quantity {
     width: 90%;
     text-align: center;
@@ -207,7 +216,7 @@ strike {
 
 .quantity img {
     cursor: pointer;
-    
+
 }
 
 input {
@@ -240,6 +249,10 @@ input {
 
 /*Responsive Queries*/
 @media screen and (max-width:700px) {
+    body {
+        z-index: 1;
+    }
+
     .hamburger {
         display: block;
         margin: 0px 20px;
@@ -251,20 +264,14 @@ input {
         filter: brightness(0);
     }
 
-    .hamburger img:hover>.nav-items {
-        display: block;
-        width: 70%;
-    }
-
     .nav-items {
         display: none;
-
     }
 
     nav {
+        margin: 0;
         align-items: center;
         width: 100%;
-        
     }
 
     .nav-logo img {
@@ -273,24 +280,44 @@ input {
         width: 12rem;
     }
 
+    .nav-items ul {
+        display: block;
+        background-color: white;
+        font-weight: 900;
+        font-size: larger;
+        padding: 70px 10px;
+        opacity: 1;
+        height: 2000%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 70%;
+        z-index: 2;
+    }
+
+    .close{
+        display: none;
+    }
+
     .nav-side {
         position: absolute;
         top: 20px;
         left: 390px;
     }
-    .avatar{
+
+    .avatar {
         width: 35px;
     }
 
-    #cart{
+    #cart {
         height: 25px;
     }
 
-    hr{
+    hr {
         display: none;
     }
 
-    .container{
+    .container {
         padding: 0;
     }
 
@@ -306,13 +333,14 @@ input {
         gap: 100px;
         font-size: xx-large;
     }
-    .product-images{
+
+    .product-images {
         margin: 0;
         padding: 0;
         gap: 0;
     }
 
-    .product-content{
+    .product-content {
         padding: 30px;
     }
 
