@@ -1,29 +1,29 @@
+/*Global elements*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    
 }
 
-/*Elements*/
-body{
+body {
+    margin: auto;
+    font-size: 16px;
     overflow-x: hidden;
 }
+
 a {
     text-decoration: none;
     color: black;
 }
 
-ul,
-li {
-    list-style-type: none;
-    padding: 0;
+ul {
+    list-style: none;
     margin: 0;
     cursor: pointer;
 }
 
 section {
-    padding: 80px 50px;
+    padding: 30px 100px;
 }
 
 button {
@@ -31,53 +31,45 @@ button {
     outline: none;
     background: none;
 }
-body{
-    font-size: 16px;
-}
 
 /*Navbar*/
-nav {
-    margin: auto;
-    position: relative;
-    display: flex;
-    color: black;
-    font-size: 1rem;
-    font-weight: 300;
-    background-color: white;
-    border-bottom:1px solid #e3dfdf ;
-}
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
-.nav-logo{
-    padding: 35px 0px;
-    margin-right: 40px;
-}
-.nav-items ul {
+nav {
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e3dfdf;
+}
+
+.nav-logo {
+    margin-right: 20px;
+    flex: 0.3;
+}
+
+.nav-logo img {
+    padding-bottom: 10px;
+}
+
+.nav-items ul {
+    display: flex;
 }
 
 .nav-items li {
     padding: 40px 20px;
 }
 
-.nav-items li:hover{
-    border-bottom:2px solid #FF7E1B;
+.nav-items li:hover {
+    border-bottom: 2px solid #FF7E1B;
 }
 
 .nav-side {
-    position: absolute;
     display: flex;
+    flex: 1;
+    justify-content: right;
     align-items: center;
-    justify-content: center;
-    padding: 25px 0px;
-    top: 0;
-    right: 0px;
-    gap: 30px;
+    gap: 25px;
 }
 
 .nav-side img {
@@ -85,82 +77,86 @@ nav {
 }
 
 .avatar {
-    width: 50px;
+    width: 35px;
 }
 
 #cart {
     height: 20px;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+
 .close {
     display: none;
     position: absolute;
+    cursor: pointer;
     margin: 0px 20px;
     top: 40px;
 }
 
 /*Main-body*/
 main {
-    display: flex;
+    max-width: 1200px;
+    margin: 60px auto;
 }
 
 /*Product detail section*/
 .product-details {
     display: flex;
-    gap: 100px;
+    gap: 110px;
 }
 
 .product-images img {
     border-radius: 20px;
     height: 500px;
-    object-fit: contain;
 }
 
 .thumbnail {
-    gap: 30px;
-    justify-content: center;
-    margin-top: 30px;
-
+    display: flex;
+    margin-top: 15px;
+    gap: 15px;
 }
 
 .thumbnail img {
     border-radius: 10px;
-    height: 100px;
-    margin: 10px;
-    position: relative;
+    height: 110px;
+    cursor: pointer;
+    margin: auto;
 }
 
 .thumbnail img:hover {
-    border: #FF7E1B 3px solid;
-    background-color: #E6EAE4;
+    border: #FF7E1B 2px solid;
     opacity: 0.6;
-    cursor: pointer;
 }
 
+/*Product Content*/
+
 .product-content {
-    padding: 60px 0px;
+    margin: 60px auto;
 }
 
 .heading {
     letter-spacing: 2px;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 700;
-    opacity: 0.6;
+    color: #777;
 }
 
 .title {
-    font-weight: 900;
-    font-size: 2.7rem;
+    font-weight: 800;
+    font-size: 2.2rem;
+    margin: 20px 0px;
 }
 
 .details {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-size: 1.3rem;
+    margin-bottom: 25px;
     line-height: 1.6;
-    opacity: 0.6;
-    position: relative;
-
+    font-size: 1.1rem;
+    color: #777;
 }
 
 .slide-buttons {
@@ -177,31 +173,32 @@ main {
 
 .pricing {
     display: flex;
+    gap: 20px;
 }
 
 .price {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 800;
-    margin-right: 15px;
+    margin-bottom: 0;
 }
 
 .discount {
     background-color: black;
     color: white;
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     padding: 1px 10px;
     font-weight: 700;
-    margin-top: 15px;
+    margin-top: 12px;
     border-radius: 5px;
     height: 40%;
 }
 
 strike {
     letter-spacing: 0;
-    margin-top: 20px;
 }
 
 .cart-add {
+    margin: 20px 0px;
     display: flex;
     gap: 60px;
 }
@@ -212,17 +209,13 @@ strike {
 
 .quantity {
     width: 90%;
-    text-align: center;
     margin: auto;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 10px;
     background: #F6F7FC;
     border-radius: 10px;
-}
-
-.quantity img {
-    cursor: pointer;
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 input {
@@ -239,10 +232,8 @@ input {
     width: 90%;
     height: 70%;
     margin: auto;
-    padding: 5px 0px;
     gap: 15px;
     background-color: #FF7E1B;
-    color: black;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
@@ -254,9 +245,148 @@ input {
 }
 
 /*Responsive Queries*/
-@media screen and (max-width:700px) {
+@media screen and (max-width: 1400px) {
+    html {
+        width: min-content;
+        height: min-content;
+        margin: auto;
+    }
+
+    .cart-add {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+
+    .product-content {
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    html {
+        width: min-content;
+        height: min-content;
+        margin: auto;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .cart-add {
+        display: block;
+
+    }
+
+    .quantity {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    html {
+        width: min-content;
+        height: min-content;
+    }
+
     body {
-        z-index: 0;
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .hamburger {
+        display: block;
+        margin: 0px 40px;
+    }
+
+    .hamburger img {
+        margin-top: 5px;
+        width: 1.5rem;
+        filter: brightness(0);
+    }
+
+    .nav-items {
+        display: none;
+    }
+
+    nav {
+        margin: 0px auto;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-logo {
+        margin: 0px;
+        padding: 25px 0px;
+        width: 12rem;
+    }
+
+    .nav-logo img {
+        padding: 0;
+    }
+
+    .nav-items ul {
+        display: block;
+        background-color: white;
+        font-weight: 900;
+        font-size: 1.2rem;
+        padding: 70px 10px;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 65%;
+        z-index: 1;
+    }
+
+    .nav-items li {
+        padding: 20px;
+    }
+
+    .nav-side {
+        justify-content: right;
+    }
+
+    .product-details {
+        display: block;
+    }
+
+    .thumbnail {
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .heading {
+        margin: 30px 0px 15px 0px;
+    }
+
+    .total-pricing {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .cart-add {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .add-to-cart {
+        margin: 0;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:700px) {
+    html {
+        width: min-content;
+        height: min-content;
     }
 
     .hamburger {
@@ -275,9 +405,9 @@ input {
     }
 
     nav {
-        margin: 0;
+        margin: 0px 10px;
         align-items: center;
-        width: 100%;
+        justify-content: space-between;
     }
 
     .nav-logo {
@@ -292,22 +422,20 @@ input {
         font-weight: 900;
         font-size: 1.2rem;
         padding: 70px 10px;
-        height:1460%;
+        height: 100vh;
         position: fixed;
         left: 0;
         top: 0;
-        width: 65%;
+        width: 60%;
         z-index: 1;
     }
 
-    .nav-items li{
-        padding: 20px ;
+    .nav-side {
+        justify-content: right;
     }
 
-    .nav-side {
-        position: absolute;
-        padding: 25px 0px;
-        left: 425px;
+    .nav-items li {
+        padding: 20px;
     }
 
     .avatar {
@@ -318,9 +446,7 @@ input {
         height: 25px;
     }
 
-    hr {
-        display: none;
-    }
+
 
     .container {
         margin: 0;
@@ -331,11 +457,13 @@ input {
         padding: 0;
         flex-direction: row;
         flex-wrap: wrap;
+        width: 100%;
         gap: 0;
     }
 
     .total-pricing {
         display: flex;
+        margin: 25px 0px;
         justify-content: space-between;
     }
 
@@ -346,7 +474,7 @@ input {
     }
 
     .product-content {
-        padding: 30px;
+        padding: 0px 30px;
     }
 
     .price {
@@ -365,7 +493,7 @@ input {
     }
 
     .details {
-        margin-top: 0;
+        margin: 0;
     }
 
     .product-details {
@@ -431,21 +559,4 @@ input {
         font-size: larger;
     }
 
-}
-
-@media screen and (max-width:1200px) {
-
-    .title{
-        font-size: 2.5rem;
-    }
-    
-    .product-content{
-        padding-top: 10px;
-    }
-    .cart-add{
-        display: block;
-    }
-    .quantity{
-        margin-bottom: 20px;
-    }
 }
